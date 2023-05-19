@@ -1,0 +1,2 @@
+# JMeter generated Authorization file
+localhost:8080	kawaman@mail.rk	password			BASIC

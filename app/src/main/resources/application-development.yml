@@ -1,0 +1,28 @@
+logging:
+  level.: INFO
+  level.at.ac.tuwien.sepm.groupphase.backend: DEBUG
+  level.org.springframework: INFO
+
+application:
+  authentication:
+    signature-algorithm: HS256
+    secret: jwtSecret
+    validity-duration: 600
+    overlap-duration: 300
+hcaptcha:
+  secretKey: '0x0000000000000000000000000000000000000000'
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    open-in-view: true
+  datasource:
+    url: jdbc:h2:file:../database/backend;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driver-class-name: org.h2.Driver
+    username: admin
+    password: password
+security.basic.enable: false

@@ -1,0 +1,53 @@
+logging:
+  file: ./log/backend.log
+  level.: WARN
+
+banner:
+  location: banner/banner.txt
+
+server:
+  context-path: /
+
+spring:
+  application:
+    name: Backend
+  jpa:
+
+    hibernate:
+      ddl-auto: update
+      use-new-id-generator-mappings: true
+    database-platform: org.hibernate.dialect.H2Dialect
+
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+  profiles:
+    active: development
+  mvc:
+      pathmatch:
+            matching-strategy: ant_path_matcher
+  datasource:
+        password:
+        url: jdbc:h2:mem:testdb
+        username: sa
+        driverClassName: org.h2.Driver
+
+security:
+  basic:
+    enabled: false
+
+management:
+  info:
+    git:
+      mode: full
+
+receipt:
+  address: Ticketline-Gasse 1a, 1010 Wien
+
+ticket:
+  check:
+    url: https://ticketline.at/tickets/check/
+
+spring.main.allow-circular-references: true

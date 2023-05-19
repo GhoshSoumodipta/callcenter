@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    
+	<changeSet id="sequence-create-h2" author="Nick">
+		<sqlFile relativeToChangelogFile="true" path="sequence-create-h2.sql"/>
+    </changeSet>
+    <changeSet id="first-create" author="Nick">
+        <sqlFile relativeToChangelogFile="true" path="first-create-h2.sql"/>
+    </changeSet>
+    <changeSet id="base-users" author="Nick">
+        <sqlFile relativeToChangelogFile="true" path="insert-base-users-h2.sql"/>
+    </changeSet>
+    <changeSet id="after-base-users" author="Nick">
+        <sqlFile relativeToChangelogFile="true" path="insert-after-base-users-h2.sql"/>
+    </changeSet>
+    <!--
+    <changeSet id="nick-user" author="Nick">
+        <sqlFile relativeToChangelogFile="true" path="insert-nick-user-h2.sql"/>
+    </changeSet>
+    <changeSet id="users" author="Nick">
+        <sqlFile relativeToChangelogFile="true" path="insert-users-h2.sql"/>
+    </changeSet>
+    -->
+</databaseChangeLog>
